@@ -1,0 +1,123 @@
+/* ------------------------- BODY --------------------------------------- */
+body {
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+/* ------------------------------- HOME --------------------------------- */
+section {
+  padding: 70px 17% 60px;
+}
+
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to left, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(/assets/img/background-Home.png);
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;   /* alinhar horizontal centro*/
+} 
+
+.home-texto h5 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--main-color);
+}
+
+.home-texto h1 {
+  font-size: var(--h1-font);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.home-texto p {
+  font-size: var(--p-font);
+  font-weight: 500;
+  line-height: 30px;
+  color: #ffffffab;
+  margin-bottom: 35px;
+}
+
+.home-texto a {
+  color: var(--text-color);
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 40px;
+  background: var(--main-color);
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: all .50s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+   transform: translateX(10px);
+   border: 2px solid var(--text-color);
+   background: transparent;
+   color: var(--text-color);
+}
+
+/* ------------------------- PASSEIO ------------------------------------ */
+
+.center-texto{
+  text-align: center;
+}
+
+.center-texto h2 {
+  font-size: var(--h2-font);
+  font-weight: 800;
+}
+
+.passeio-caixa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  align-items: center;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+
+.box{
+  position: relative;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: brightness(70%);
+  transition: all 0.3s cubic-bezier(0.499, 0.05, 0.55, 0.95);
+  will-change: filter;
+  display: block;
+}
+
+.box h6 {
+  position: absolute;
+  left: 90px;
+  bottom: 95px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.box img:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+.button-passeio {
+  text-align: center;
+  margin-top: 4rem;
+}
