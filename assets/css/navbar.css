@@ -1,0 +1,90 @@
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  background: transparent;
+  padding: 27px 17%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .50s ease;
+}
+
+.logo {
+  font-size: 33px;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+span {
+  color: var(--main-color);
+}
+
+
+/* ---------------------- NAVBAR ---------------------------------------  */
+.navbar{
+  display: flex;   /* ficar um do lado do outro */
+}
+
+.navbar a {
+  color: var(--text-color);
+  font-size: var(--p-font);
+  font-weight: 500;
+  margin: 15px 22px;
+  transition: all .50s ease;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons a {
+  vertical-align: middle;
+  font-size: 20px;
+  color: var(--text-color);
+  margin-right: 18px;
+  margin-left: 5px;
+  transition: all .50s ease;
+}
+
+.icons a:hover {
+  color: var(--main-color);
+  transform: translateY(-3px);
+}
+
+#menu-icon {
+  color: var(--text-color);
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+
+.login {
+  padding: 6px 24px;
+  border: 2px solid #fff;
+  color: var(--main-color);
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login:hover {
+  transform: scale(0.98);
+  transition: 0.5s;
+}
+
+/* ------------------- SCROLL NAVBAR ------------------------------------ */
+header.sticky {
+  padding: 8px 17%;
+  background: transparent;
+  backdrop-filter: blur(35px);
+}
+
