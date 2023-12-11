@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>40 Graus</title>
+  <title>40 Graus | Promoções</title>
 
 
   <!-- CSS -->
@@ -27,5 +27,128 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <a href="/index.html" class="logo">40<span>Graus</span></a>
+
+    <ul class="navbar">
+      <li><a href="/index.html">Iníco</a></li>
+      <li><a href="/assets/html/destino.html">Destinos</a></li>
+      <li><a href="/assets/html/promocao.html">Promoções</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+
+    <div class="icons">
+      <a href="./login.html"><button class="login">Login</button></a>
+      <a href="#"><i class="ri-instagram-fill"></i></a>
+      <a href="#"><i class="ri-twitter-fill"></i></a>
+      <a href="#"><i class="ri-facebook-fill"></i></a> 
+      <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+  </header>
+
+  <section class="promocao">
+    <video class="video-slide active" src="/assets/img/video/cristo-redentor.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="/assets/img/video/museo-amanha.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="/assets/img/video/armacao-buzios.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="/assets/img/video/pedra-gavea.mp4" autoplay muted loop></video>
+
+    
+    <div class="conteudo-promocao active">
+      <h1>Cristo<br><span>redentor</span></h1>
+      <p>Venha Conhecer o ponto turístico mas famoso do Brasil! Localizado no alto do morro do Corcovado, o Cristo Redentor é o principal cartão postal da cidade, uma atração turística imperdível, eleita uma das sete maravilhas do mundo moderno, visitá-lo é um daqueles passeios que faz a alegria de todo turista, com belas recordações para a vida toda!</p>
+      <a href="./login.html" class="button">Promoção Imperdível</a>
+    </div>
+    <div class="conteudo-promocao">
+      <h1>Museu do<br><span>Amanhã</span></h1>
+      <p>Descubra o futuro no Museu do Amanhã! Explore exposições interativas que revelam as maravilhas da ciência, tecnologia e sustentabilidade. Compre seu ingresso agora e embarque em uma jornada fascinante para entender como o mundo está mudando e como você pode fazer a diferença. Venha viver essa experiência única com desconto especial! </p>
+      <a href="./login.html" class="button">Promoção Imperdível</a>
+    </div>
+    <div class="conteudo-promocao">
+      <h1>Praia<br><span>da Foca</span></h1>
+      <p>Viva a Magia de Búzios! Deixe-se envolver pelo charme de Búzios, com nossas ofertas especiais de viagem. Explore praias, faça compras em boutiques exclusivas e delicie-se com pratos gourmet. Reserve agora para uma experiência de viagem inesquecível!</p>
+      <a href="./login.html" class="button">Promoção Imperdível</a>
+    </div>
+    <div class="conteudo-promocao">
+      <h1>Pedra<br><span>da Gávea</span></h1>
+      <p>Trilha Guiada pela Pedra da Gávea! Junte-se a nós para uma jornada emocionante até o cume da Pedra da Gávea, um dos pontos mais altos do Rio de Janeiro. Nossos guias turísticos não apenas mostrarão o caminho, mas também compartilharão informações interessantes sobre a flora e fauna locais, além de histórias intrigantes sobre a mitologia por trás dessa montanha majestosa. Reserve sua excursão agora e mergulhe na rica história natural do Brasil enquanto desfruta de vistas panorâmicas deslumbrantes! </p>
+      <a href="./login.html" class="button">Promoção Imperdível</a>
+    </div>
+    <div class="slider-navigation">
+      <div class="nav-btn active"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+    </div>
+  </section>
+
+  <section>
+    <footer>
+      <div class="footer-conteudo">
+        <ul>
+          <a href="/index.html" class="logo">40<span>Graus</span></a>
+          <p>O destino perfeito para você.</p>
+          <div id="footer-social">
+            <a href="#" class="footer-links" id="instagram">
+              <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="#" class="footer-links" id="twitter">
+              <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="#" class="footer-links" id="facebook">
+              <i class="ri-facebook-fill"></i>
+            </a>
+          </div>
+        </ul>
   
+        <ul>
+          <li><h3>Navegação rápida</h3></li>
+          <li><a href="/index.html">Página Inicial</a></li>
+          <li><a href="#">Nossos Passeios</a></li>
+          <li><a href="#">Sobre 40 Graus</a></li>
+        </ul>
+  
+        <ul>
+          <h3>Ajuda</h3>
+          <li><a href="#">Perguntas Frequentes</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+      <div id="footer-copyright">
+        &#169
+        2023 by Letícia Castanheira
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript">
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const conteudos = document.querySelectorAll(".conteudo-promocao");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      conteudos.forEach((conteudo) => {
+        conteudo.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      conteudos[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+  </script>
+
+  <script src="/assets/script/script-nav.js"></script>
 </body>

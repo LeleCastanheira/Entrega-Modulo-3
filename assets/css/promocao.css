@@ -1,0 +1,136 @@
+body {
+  color: var(--text-color);
+  /* background: var(--bg-color); */
+}
+
+section {
+  padding: 70px 17% 60px;
+  background: var(--bg-color);
+}
+
+.promocao {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--main-color);
+}
+
+.promocao:before {
+  z-index: 777;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.promocao video {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.promocao .conteudo-promocao {
+  z-index: 888;
+  color: var(--text-color);
+  width: 70%;
+  margin-top: 10%;
+  display: none;
+}
+
+.promocao .conteudo-promocao.active {
+  display: block;
+}
+
+.promocao .conteudo-promocao h1 {
+  font-size: var(--h1-font);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: 40px;
+}
+
+.promocao .conteudo-promocao h1 span {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+
+.button {
+  display: inline-block;
+  padding: 13px 40px;
+  background: var(--main-color);
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: all .50s ease;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.button:hover {
+   transform: translateX(10px);
+   border: 2px solid var(--text-color);
+   background: transparent;
+   color: var(--text-color);
+}
+
+.slider-navigation {
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+  margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  transition: 0.3 ease;
+}
+
+.slider-navigation .nav-btn.active {
+  background: var(--main-color);
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover {
+  transform: scale(1.2);
+}
+
+.video-slide {
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.video-slide.active {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s ease;
+  transition-property: clip-path;
+}
+
+footer {
+  background-color: var(--bg-color);
+}
